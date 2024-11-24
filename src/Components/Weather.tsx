@@ -1,35 +1,19 @@
 import React from 'react'
 
-// if (navigator.geolocation) {
-//   navigator.geolocation.getCurrentPosition(success, error);
-// } else {
-//   console.log("Geolocation not supported");
-// }
-
-// function success(position: GeolocationPosition) {
-//   const latitude = position.coords.latitude;
-//   const longitude = position.coords.longitude;
-//   console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-// }
-
-// function error() {
-//   console.log("Unable to retrieve your location");
-// }
-
 interface WeatherProps {
-  temperature: number
-  weather: string
+  temperature?: number
+  weather?: string
 }
 
 const Weather: React.FC<WeatherProps> = ({ temperature, weather }) => {
   return (
-    <div>
-      <h1>My Weather</h1>
-      <ul>
-        <li>{temperature}</li>
-        <li>{weather}</li>
-      </ul>
-      <p>Have a Good Day!</p>
+    <div className="card text-center mb-3" style={{ width: "18rem;" }}>
+      <div className="card-body">
+        <h5 className="card-title">My Weather</h5>
+        <p className="card-text">{temperature}°C</p>
+        <p className="card-text">{weather}</p>
+        <p className="btn btn-primary">Have a Good Day</p>
+      </div>
     </div>
   )
 }
