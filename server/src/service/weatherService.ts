@@ -10,9 +10,7 @@ export interface WeatherData {
 }
 
 
-export default class WeatherService {
-
-
+class WeatherService {
   async getWeatherData(coordinate: Coordinate): Promise<WeatherData | Error> {
 
     try {
@@ -30,3 +28,5 @@ export default class WeatherService {
     }
   }
 }
+
+export default new WeatherService();
