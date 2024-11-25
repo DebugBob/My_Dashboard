@@ -57,6 +57,7 @@ const Dashboard = () => {
       <Link to={"/"} className="btn btn-primary">
         Dashboard page, click to Login
       </Link>
+      <News newsTitle={newsTitle} />
     </div>
   );
 }
