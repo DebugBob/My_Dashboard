@@ -7,9 +7,7 @@ const retrieveNews = async (): Promise<string | null> => {
         // Authorization: `Bearer ${Auth.getToken()}`
       }
     });
-
-    console.log('res=', response)
-
+    
     const newsData = await response.json();
 
     if (!response.ok) {
