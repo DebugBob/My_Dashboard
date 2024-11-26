@@ -1,4 +1,4 @@
-import express from 'express';
+import * as express from 'express';
 import { getNewsData } from '../../controllers/news-controller.js';
 
 const router = express.Router();
