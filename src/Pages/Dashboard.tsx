@@ -3,6 +3,8 @@ import { Fluent_Calendar } from "../Components/Calendar";
 import Weather from "../Components/Weather";
 import { useEffect, useState } from "react";
 import { Coordinate, retrieveWeather } from "../api/weatherAPI";
+import News from "../Components/News";
+import { retrieveNews } from "../api/newsAPI";
 
 // the default location for this app is Melbourne, Australia
 const DEFAULT_LOCATION: Coordinate = {
@@ -14,9 +16,11 @@ const Dashboard = () => {
   // Placeholder Button returns to Login Page
   const [temperature, setTemperature] = useState<number>();
   const [weather, setWeather] = useState<string>();
+  const [newsTitle, setNewsTitle] = useState<string>();
 
   useEffect(() => {
     getCoords();
+    fetchNewsData();
   }, []);
 
   const getCoords = () => {
@@ -46,6 +50,15 @@ const Dashboard = () => {
       setWeather(data.weatherDescription)
     } else {
       console.log("No weather data can be retrieved");
+    }
+  }
+
+  const fetchNewsData = async () => {
+    const webTitle = await retrieveNews();
+    if (webTitle != null) {
+      setNewsTitle(webTitle);
+    } else {
+      console.log("No news data can be retrieved");
     }
   }
 
