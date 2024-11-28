@@ -6,11 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:server": "cd server && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run build && npm run build:server && npm run start:server",
-    "start:server": "cd server && npm run start"
+    "start": "npm run build && npm run server",
+    "server": "cd server && npm run start"
   },
   "dependencies": {
     "@fluentui/react": "^8.121.12",
