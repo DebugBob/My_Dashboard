@@ -2,6 +2,7 @@ const retrieveWeather = async (coords: Coordinate): Promise<WeatherData | null> 
   try {
 
     const response = await fetch('/api/weather', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         // Authorization: `Bearer ${Auth.getToken()}`

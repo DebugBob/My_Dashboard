@@ -19,7 +19,7 @@ const Dashboard = () => {
   // State management for weather and news data
   const [temperature, setTemperature] = useState<number | undefined>();
   const [weather, setWeather] = useState<string | undefined>();
-  const [newsTitle, setNewsTitle] = useState<string | undefined>();
+  const [newsTitles, setNewsTitles] = useState<string[] | undefined>();
 
   // Fetch data on component mount
   useEffect(() => {
@@ -64,9 +64,9 @@ const Dashboard = () => {
   // Fetch news data
   const fetchNewsData = async () => {
     try {
-      const title = await retrieveNews();
-      if (title) {
-        setNewsTitle(title);
+      const titles = await retrieveNews();
+      if (titles) {
+        setNewsTitles(titles);
       } else {
         console.error("No news data retrieved.");
       }
@@ -173,7 +173,7 @@ const Dashboard = () => {
           margin: "0 auto",
         }}
       >
-        <News newsTitle={newsTitle} />
+        <News newsTitles={newsTitles} />
       </div>
 
       {/* Navigation Section */}

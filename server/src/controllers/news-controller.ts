@@ -5,7 +5,7 @@ import newsService from '../service/newsService.js';
 export const getNewsData = async (_req: Request, res: Response) => {
   try {
     const newsData = await newsService.getNewsData();
-    res.json({ webTitle: newsData });
+    res.json({ webTitles: newsData });
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }
