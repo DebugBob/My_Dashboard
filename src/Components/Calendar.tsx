@@ -19,7 +19,7 @@ export const Fluent_Calendar: React.FunctionComponent =
 
 
     return (
-      <div className="shadow-sm p-3 mb-5 bg-white rounded">
+      <div className="">
         {/* <div>Selected date: {selectedDate?.toLocaleString() || "Not set"}</div> */}
 
         <Calendar

@@ -81,7 +81,7 @@ const Dashboard = () => {
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
-        width: "300vh",
+        width: "100vw",
         padding: "20px",
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -97,7 +97,7 @@ const Dashboard = () => {
           borderRadius: "8px",
           marginBottom: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "100%",
+          width: "auto",
           maxWidth: "600px",
         }}
       >
@@ -112,7 +112,7 @@ const Dashboard = () => {
           borderRadius: "8px",
           marginBottom: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "100%",
+          width: "auto",
           maxWidth: "600px",
         }}
       >
@@ -147,7 +147,7 @@ const Dashboard = () => {
           borderRadius: "8px",
           marginTop: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "100%",
+          width: "auto",
           maxWidth: "600px",
         }}
       >
