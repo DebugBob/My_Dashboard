@@ -7,6 +7,7 @@ import News from "../Components/News";
 import { retrieveNews } from "../api/newsAPI";
 import backgroundImage from "./backg2.jpg"; // Import your background image
 import Todo from "../Components/Todo";
+import Clock from "../Components/Clock";
 
 // Default location for the app: Melbourne, Australia
 const DEFAULT_LOCATION: Coordinate = {
@@ -79,8 +80,8 @@ const Dashboard = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
+        // alignItems: "center",
         height: "100vh",
         width: "100vw",
         padding: "20px",
@@ -90,21 +91,6 @@ const Dashboard = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Calendar Section */}
-      <div
-        style={{
-          background: "rgba(255, 255, 255, 0.9)",
-          padding: "20px",
-          borderRadius: "8px",
-          marginBottom: "20px",
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "auto",
-          maxWidth: "600px",
-        }}
-      >
-        <Fluent_Calendar />
-      </div>
-
       {/* Weather Section */}
       <div
         style={{
@@ -114,25 +100,80 @@ const Dashboard = () => {
           marginBottom: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           width: "auto",
-          maxWidth: "600px",
+          maxWidth: "300px",
+          alignItems: "center",
         }}
       >
         <Weather temperature={temperature} weather={weather} />
       </div>
-      
-      {/* Todo Section */}
+
       <div
         style={{
+          position: "absolute",
+          top: "20px",
+          right: "20px",
           background: "rgba(255, 255, 255, 0.9)",
           padding: "20px",
           borderRadius: "8px",
           marginBottom: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "100%",
-          maxWidth: "600px",
         }}
       >
-        <Todo />
+        <Clock />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}
+      >
+        {/* Calendar Section */}
+
+        {/* Todo Section */}
+        <div
+          style={{
+            background: "rgba(255, 255, 255, 0.9)",
+            padding: "20px",
+            borderRadius: "8px",
+            marginBottom: "20px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+            width: "100%",
+            maxWidth: "600px",
+          }}
+        >
+          <Todo />
+        </div>
+
+        <div
+          style={{
+            background: "rgba(255, 255, 255, 0.9)",
+            padding: "20px",
+            borderRadius: "8px",
+            marginBottom: "20px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+            width: "auto",
+            maxWidth: "600px",
+          }}
+        >
+          <Fluent_Calendar />
+        </div>
+      </div>
+
+      {/* News Section */}
+      <div
+        style={{
+          background: "rgba(255, 255, 255, 0.9)",
+          padding: "15px",
+          borderRadius: "8px",
+          marginTop: "20px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          width: "auto",
+          maxWidth: "auto",
+          margin: "0 auto",
+        }}
+      >
+        <News newsTitle={newsTitle} />
       </div>
 
       {/* Navigation Section */}
@@ -140,34 +181,22 @@ const Dashboard = () => {
         <Link
           to="/"
           style={{
-            display: "inline-block",
+            display: "flex",
+            justifyContent: "center",
             padding: "10px 20px",
             backgroundColor: "#007bff",
             color: "#fff",
             textDecoration: "none",
             borderRadius: "5px",
-            textAlign: "center",
+            alignItems: "center",
+            maxWidth: "150px",
             cursor: "pointer",
             boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+            margin: "0 auto",
           }}
         >
           Back to Login
         </Link>
-      </div>
-
-      {/* News Section */}
-      <div
-        style={{
-          background: "rgba(255, 255, 255, 0.9)",
-          padding: "20px",
-          borderRadius: "8px",
-          marginTop: "20px",
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          width: "auto",
-          maxWidth: "600px",
-        }}
-      >
-        <News newsTitle={newsTitle} />
       </div>
     </div>
   );

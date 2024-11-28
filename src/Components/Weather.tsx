@@ -10,8 +10,8 @@ const Weather: React.FC<WeatherProps> = ({ temperature, weather }) => {
     <div className="card text-center mb-3" style={{ width: "18rem;" }}>
       <div className="card-body">
         <h5 className="card-title">My Weather</h5>
-        <p className="card-text">{temperature}°C</p>
-        <p className="card-text">{weather}</p>
+        <p className="card-text">{temperature ?? '25'}°C</p>
+        <p className="card-text">{weather ?? 'Sunny'}</p>
         <p className="btn btn-primary">Have a Good Day</p>
       </div>
     </div>
