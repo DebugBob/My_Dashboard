@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useState, useEffect } from "react";
-import backgroundImage from "./3402393.jpg";
+import { useState, useEffect } from "react";
+import backgroundImage from "./Dashboard";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,12 +15,12 @@ const Login = () => {
         localStorage.removeItem("jwt");
         localStorage.removeItem("jwt_expiry");
       } else {
-        navigate("./Dashboard"); 
+        navigate("./Dashboard");
       }
     }
   }, [navigate]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (email && password) {
       try {
@@ -37,7 +37,7 @@ const Login = () => {
           localStorage.setItem("jwt", data.token);
           localStorage.setItem(
             "jwt_expiry",
-            (new Date().getTime() + 60 * 60 * 1000).toString() 
+            (new Date().getTime() + 60 * 60 * 1000).toString()
           );
           alert("Login successful!");
           navigate("./Dashboard");
