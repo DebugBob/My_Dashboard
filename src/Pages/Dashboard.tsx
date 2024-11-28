@@ -6,6 +6,7 @@ import { Coordinate, retrieveWeather } from "../api/weatherAPI";
 import News from "../Components/News";
 import { retrieveNews } from "../api/newsAPI";
 import backgroundImage from "./backg2.jpg"; // Import your background image
+import Todo from "../Components/Todo";
 
 // Default location for the app: Melbourne, Australia
 const DEFAULT_LOCATION: Coordinate = {
@@ -117,6 +118,21 @@ const Dashboard = () => {
         }}
       >
         <Weather temperature={temperature} weather={weather} />
+      </div>
+      
+      {/* Todo Section */}
+      <div
+        style={{
+          background: "rgba(255, 255, 255, 0.9)",
+          padding: "20px",
+          borderRadius: "8px",
+          marginBottom: "20px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          width: "100%",
+          maxWidth: "600px",
+        }}
+      >
+        <Todo />
       </div>
 
       {/* Navigation Section */}
