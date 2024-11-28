@@ -164,12 +164,12 @@ const Dashboard = () => {
       <div
         style={{
           background: "rgba(255, 255, 255, 0.9)",
-          padding: "20px",
+          padding: "15px",
           borderRadius: "8px",
           marginTop: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           width: "auto",
-          maxWidth: "600px",
+          maxWidth: "auto",
           margin: "0 auto",
         }}
       >
