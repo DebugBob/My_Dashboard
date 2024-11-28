@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import backgroundImage from "./Dashboard";
+import backgroundImage from "./3402393.jpg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
