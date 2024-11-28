@@ -7,6 +7,7 @@ import News from "../Components/News";
 import { retrieveNews } from "../api/newsAPI";
 import backgroundImage from "./backg2.jpg"; // Import your background image
 import Todo from "../Components/Todo";
+import Clock from "../Components/Clock";
 
 // Default location for the app: Melbourne, Australia
 const DEFAULT_LOCATION: Coordinate = {
@@ -104,6 +105,21 @@ const Dashboard = () => {
         }}
       >
         <Weather temperature={temperature} weather={weather} />
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          top: "20px",
+          right: "20px",
+          background: "rgba(255, 255, 255, 0.9)",
+          padding: "20px",
+          borderRadius: "8px",
+          marginBottom: "20px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        <Clock />
       </div>
 
       <div
