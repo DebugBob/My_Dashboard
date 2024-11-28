@@ -18,8 +18,8 @@ This is a versatile **Dashboard Application** that includes the following featur
 - **APIs**: News API, Weather API.
 
 ## Dashboard in action
-- images go here
-
+![Dashboard_Wireframe](./src/assets/Dashboard_Wireframe.jpg "Dashboard")
+![Login_Wireframe](./src/assets/Login_Wireframe.jpg "Login")
 ## Links
 - [Repo](https://github.com/DebugBob/My_Dashboard)
 -  Deployed website link
