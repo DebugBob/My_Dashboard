@@ -6,13 +6,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Page Router with Login page as Default.
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Login />,
+  //   errorElement: <ErrorPage />,
+  // },
   {
     path: "/",
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/Dashboard",
     element: <Dashboard />,
   },
 ]);
