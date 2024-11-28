@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from  './Pages/ErrorPage';
-import Login from './Pages/Login';
+//import ErrorPage from  './Pages/ErrorPage';
+//import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard'
 import "bootstrap/dist/css/bootstrap.min.css";
 
