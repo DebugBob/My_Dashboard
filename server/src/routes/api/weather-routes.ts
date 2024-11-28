@@ -1,4 +1,4 @@
-import express from 'express';
+import * as express from 'express';
 import { getWeatherData } from '../../controllers/weather-controller.js';
 
 const router = express.Router();
